@@ -28,13 +28,11 @@ public class WelcomeController {
         request.getSession().removeAttribute("username");
         return "welcome";
     }
-    
+
     @RequestMapping("/logout")
     public String logout(HttpServletRequest request) {
-        request.getSession().removeAttribute("username");
+        request.getSession().setAttribute("username", null);
         return "welcome";
     }
-    
-    
 
 }
