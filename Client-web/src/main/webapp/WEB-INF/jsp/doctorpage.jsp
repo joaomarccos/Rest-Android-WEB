@@ -59,7 +59,7 @@
                             <c:forEach items="${comments}" var="comment">
                                 <div class="panel">                                    
                                     <div class="panel-body">
-                                        <h5><i class="glyphicon glyphicon-user"></i> ${comment.userName}<div class="rating pull-right" style="width: 80px; font-size: 8px; margin-top: -7px;" data-rating="${comment.rating}"></div></h5>                                                                            
+                                        <h5><i class="glyphicon glyphicon-user"></i> ${comment.userName}<div class="rating pull-right" style="width: 90px; font-size: 8px; margin-top: -7px;" data-rating="${comment.rating}"></div></h5>                                                                            
                                         <p class="text-justify text-muted">${comment.comment}</p>
                                     </div>
                                 </div>
