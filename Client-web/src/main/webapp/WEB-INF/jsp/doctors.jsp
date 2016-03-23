@@ -14,7 +14,7 @@
                 <span class="navbar-brand text-info">Bem vindo ${username} <a class="btn btn-sm btn-link" href="/logout">Sair</a></span>                
             </div>
             <div class="row container">
-                <div class="col-md-11 col-md-offset-2">
+                <div class="col-md-10 col-md-offset-2">
                     <span class="form-group-sm pull-right">
                         <input class="form-control" onkeyup="filter(this)" type="text" id="filter" placeholder="Filtrar">                        
                         <br>
