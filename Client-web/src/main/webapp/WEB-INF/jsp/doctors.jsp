@@ -31,7 +31,7 @@
                                         <div class="media-body">
                                             <h4>${d.name}</h4>
                                             <span hidden>${d.location}</span>
-                                            <span class="text-muted">${d.clinic.name}</span>
+                                            <span class="text-muted">${d.specialty} - ${d.clinic.name}</span>
                                         </div>
                                         <div class="media-right">
                                             <div class="rating" style="width: 120px; font-size: 10px" data-rating="${d.rating}"/></div>
