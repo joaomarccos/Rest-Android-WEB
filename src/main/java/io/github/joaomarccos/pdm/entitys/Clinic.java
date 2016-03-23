@@ -1,6 +1,7 @@
 package io.github.joaomarccos.pdm.entitys;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
@@ -11,6 +12,7 @@ import javax.persistence.Id;
 public class Clinic {
 
     @Id
+    @GeneratedValue
     private long id;
     private String name;
     private String coord_lat;

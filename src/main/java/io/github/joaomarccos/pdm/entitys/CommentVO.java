@@ -1,40 +1,26 @@
 package io.github.joaomarccos.pdm.entitys;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import java.io.Serializable;
 
 /**
  *
  * @author João Marcos <joaomarccos.github.io>
  */
-@Entity
-public class Comment {
-    
-    @Id
-    @GeneratedValue
-    private long id;
+public class CommentVO implements Serializable{
+
     private String userName;
     private double rating;
     private String comment;
     private long doctorId;
 
-    public Comment(String userName, double rating, String comment, long doctor_id) {
+    public CommentVO(String userName, double rating, String comment, long doctorId) {
         this.userName = userName;
         this.rating = rating;
         this.comment = comment;
-        this.doctorId = doctor_id;
+        this.doctorId = doctorId;
     }
 
-    public Comment() {
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
+    public CommentVO() {
     }
 
     public String getUserName() {
@@ -65,8 +51,8 @@ public class Comment {
         return doctorId;
     }
 
-    public void setDoctorId(long doctor_id) {
-        this.doctorId = doctor_id;
+    public void setDoctorId(long doctorId) {
+        this.doctorId = doctorId;
     }
     
     

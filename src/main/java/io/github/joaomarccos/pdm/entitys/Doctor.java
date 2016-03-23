@@ -2,6 +2,7 @@ package io.github.joaomarccos.pdm.entitys;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
@@ -12,6 +13,7 @@ import javax.persistence.OneToOne;
 @Entity
 public class Doctor {
     @Id
+    @GeneratedValue
     private long id;   
     private String name;    
     private String contact;   
