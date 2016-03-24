@@ -35,6 +35,8 @@ public class ListDoctorsActivity extends AppCompatActivity {
         ListView listView=(ListView)findViewById(R.id.listViewDoctors);
 
         listView.setAdapter(listDoctors);
+
+        listView.setOnClickListener(clickList());
     }
 
     public List<Doctor> getAllDoctors(){
@@ -53,22 +55,17 @@ public class ListDoctorsActivity extends AppCompatActivity {
             ListDoctors listDoctors = new ListDoctors(this, getFilterList(filter));
             ListView listView = (ListView) findViewById(R.id.listViewDoctors);
             listView.setAdapter(listDoctors);
+            listView.setOnClickListener(clickList());
         }
     }
+
+
     //TODO como fazer um item da lista ir para a sua activity
     private View.OnClickListener clickList(){
         return new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 TextView nome=(TextView) v.findViewById(R.id.nameDoctorView);
-//                Doctor dr = new Doctor();
-//                for(Doctor d: doctors){
-//                    if (d.getName().equals(nome)) {
-//                        dr=d;
-//                    }
-//                }
-
-
                 Intent intent=new Intent(ListDoctorsActivity.this, DoctorDetails.class);
                 intent.putExtra("nomeDoctor", nome.getText());
                 startActivity(intent);

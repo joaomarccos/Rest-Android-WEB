@@ -34,40 +34,94 @@
                 android:layout_alignTop="@+id/layout1"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView2"
-                    android:src="@drawable/icon"/>
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:id="@+id/layout3">
-
-                    <TextView
+                    android:id="@+id/content1"
+                    android:layout_marginRight="10dp">
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Doctor"
-                        android:id="@+id/nameDoctorView"
-                        android:textSize="@dimen/item_touch_helper_max_drag_scroll_per_frame"/>
-
+                        android:id="@+id/imageView2"
+                        android:src="@drawable/icon"/>
                     <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/layout4">
-                        <RatingBar
+                        android:id="@+id/layout3">
+
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            style="?android:attr/ratingBarStyleSmall"
-                            android:numStars="5"
-                            android:stepSize="1"
-                            android:rating="5"
-                            android:id="@+id/ratingBar"/>
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Doctor"
+                            android:id="@+id/nameDoctorView"
+                            android:textSize="@dimen/item_touch_helper_max_drag_scroll_per_frame"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout4">
+                            <RatingBar
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:numStars="5"
+                                android:stepSize="1"
+                                android:rating="5"
+                                android:id="@+id/ratingBar"/>
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
+                <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/content2">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/info1"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Especialidade"
+                            android:id="@+id/drEspel" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Contato"
+                            android:id="@+id/drContact" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/info2">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Localização"
+                            android:id="@+id/drlocation" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Opinião"
+                            android:id="@+id/drOpi" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
             </LinearLayout>
         </LinearLayout>
 
@@ -102,12 +156,14 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Clinica"
                         android:id="@+id/nameClinicaView"
-                        android:layout_gravity="center_horizontal" />
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="5dp"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/imageMap" />
+                        android:id="@+id/imageMap"
+                        android:layout_gravity="center_horizontal"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

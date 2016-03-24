@@ -46,6 +46,18 @@ public class DoctorDetails extends AppCompatActivity {
         RatingBar avaliacao = (RatingBar) findViewById(R.id.ratingBar);
         avaliacao.setRating(Float.parseFloat(String.valueOf(doctor.getRating())));
 
+        TextView especialidade = (TextView) findViewById(R.id.drEspel);
+        especialidade.setText(doctor.getSpecialty());
+
+        TextView opiniao = (TextView) findViewById(R.id.drOpi);
+        opiniao.setText(doctor.getOpinion());
+
+        TextView contact = (TextView) findViewById(R.id.drContact);
+        contact.setText(doctor.getContact());
+
+        TextView location = (TextView) findViewById(R.id.drlocation);
+        location.setText(doctor.getLocation());
+
         loadMap(doctor.getClinic().getCoord_lat(), doctor.getClinic().getCoord_lng());
     }
 
