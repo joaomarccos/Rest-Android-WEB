@@ -58,6 +58,7 @@
                         style="?android:attr/ratingBarStyleSmall"
                         android:numStars="5"
                         android:stepSize="1"
+                        android:rating="5"
                         android:id="@+id/ratingBar"
                         android:layout_marginLeft="100dp"/>
                 </LinearLayout>

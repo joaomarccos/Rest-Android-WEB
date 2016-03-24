@@ -64,6 +64,7 @@
                             style="?android:attr/ratingBarStyleSmall"
                             android:numStars="5"
                             android:stepSize="1"
+                            android:rating="5"
                             android:id="@+id/ratingBar"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -85,23 +86,29 @@
                     android:layout_height="wrap_content"
                     android:text="Comentarios e Avaliações"
                     android:id="@+id/buttonComentReview"
-                    android:layout_gravity="center_horizontal" />
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="callComments"/>
 
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/layoutMapContent"
-                    android:layout_marginTop="5dp"></LinearLayout>
+                    android:layout_marginTop="5dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Clinica"
-                    android:id="@+id/nameClinicaView"
-                    android:layout_gravity="center_horizontal" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Clinica"
+                        android:id="@+id/nameClinicaView"
+                        android:layout_gravity="center_horizontal" />
 
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageMap" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

@@ -13,7 +13,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".ListDoctorsActivity" />
         <activity android:name=".DoctorDetails" />
-        <activity android:name=".ListComents"></activity>
+        <activity android:name=".ListComents" />
+        <activity android:name=".AddComment"></activity>
     </application>
 
 </manifest>
