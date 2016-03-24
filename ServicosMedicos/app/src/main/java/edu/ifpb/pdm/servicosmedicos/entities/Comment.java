@@ -1,9 +1,11 @@
 package edu.ifpb.pdm.servicosmedicos.entities;
 
+import java.io.Serializable;
+
 /**
  * Created by Rafael on 23/03/2016.
  */
-public class Comment {
+public class Comment implements Serializable{
     private long id;
     private String userName;
     private double rating;

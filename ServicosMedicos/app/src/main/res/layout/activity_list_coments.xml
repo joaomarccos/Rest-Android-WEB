@@ -22,12 +22,13 @@
             android:layout_height="wrap_content"
             android:text="Fazer Comentário e Avaliação"
             android:id="@+id/buttonFazerComentario"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:onClick="callAddComment"/>
 
         <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/listView"
+            android:id="@+id/listViewComment"
             android:layout_gravity="center_horizontal"
             />
     </LinearLayout>

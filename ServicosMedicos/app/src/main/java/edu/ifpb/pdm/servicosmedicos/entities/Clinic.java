@@ -1,9 +1,11 @@
 package edu.ifpb.pdm.servicosmedicos.entities;
 
+import java.io.Serializable;
+
 /**
  * Created by Rafael on 23/03/2016.
  */
-public class Clinic {
+public class Clinic implements Serializable{
     private long id;
     private String name;
     private String coord_lat;

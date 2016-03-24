@@ -34,8 +34,7 @@ public class DoctorDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_details);
         image = (ImageView)findViewById(R.id.imageMap);
-        String dname = getIntent().getStringExtra("nomeDoctor");
-        doctor = getDoctor(dname);
+        doctor = (Doctor) getIntent().getSerializableExtra("Doctor");
 
         TextView nomeDoctor = (TextView) findViewById(R.id.nameDoctorView);
         nomeDoctor.setText(doctor.getName());
@@ -63,34 +62,13 @@ public class DoctorDetails extends AppCompatActivity {
 
     public void callComments(View view){
         Intent intent=new Intent(this, ListComents.class);
-        intent.putExtra("nomeDoctor", doctor.getName());
+        intent.putExtra("Doctor", doctor);
         startActivity(intent);
-    }
-
-
-    public Doctor getDoctor(String nome){
-        List<Doctor> doctors= getAllDoctors();
-        Doctor dr = new Doctor();
-        for(Doctor d: doctors){
-            if (d.getName().equals(nome)) {
-                dr=d;
-            }
-        }
-        return dr;
     }
 
     public void loadMap(String lat, String lng){
         TarefaDownload tarefa = new TarefaDownload();
         tarefa.execute(lat, lng);
-    }
-
-    public List<Doctor> getAllDoctors(){
-        List<Doctor> doctorList;
-        String url= "http://192.168.0.101:8080/doctors";
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-        doctorList = restTemplate.getForObject(url, List.class);
-        return doctorList;
     }
 
     private class TarefaDownload extends AsyncTask<String, Void, Bitmap> {
@@ -101,8 +79,6 @@ public class DoctorDetails extends AppCompatActivity {
 
         @Override
         protected Bitmap doInBackground(String... params) {
-
-
             return ImageMapDownload.getGoogleMapThumbnail(params[0],params[1]);
         }
 

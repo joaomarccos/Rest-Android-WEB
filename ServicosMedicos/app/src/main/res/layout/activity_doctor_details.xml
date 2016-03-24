@@ -71,6 +71,7 @@
                                 android:numStars="5"
                                 android:stepSize="1"
                                 android:rating="5"
+                                android:isIndicator="true"
                                 android:id="@+id/ratingBar"/>
                         </LinearLayout>
                     </LinearLayout>

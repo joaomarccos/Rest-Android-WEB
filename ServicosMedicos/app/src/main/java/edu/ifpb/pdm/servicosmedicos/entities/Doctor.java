@@ -2,10 +2,12 @@ package edu.ifpb.pdm.servicosmedicos.entities;
 
 import android.os.Parcelable;
 
+import java.io.Serializable;
+
 /**
  * Created by Rafael on 23/03/2016.
  */
-public class Doctor{
+public class Doctor implements Serializable{
     private long id;
     private String name;
     private String contact;

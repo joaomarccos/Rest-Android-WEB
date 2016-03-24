@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -36,7 +37,15 @@ public class ListDoctorsActivity extends AppCompatActivity {
 
         listView.setAdapter(listDoctors);
 
-        listView.setOnClickListener(clickList());
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Doctor dr = (Doctor) parent.getItemAtPosition(position);
+                Intent intent = new Intent(ListDoctorsActivity.this, DoctorDetails.class);
+                intent.putExtra("Doctor", dr);
+                startActivity(intent);
+            }
+        });
     }
 
     public List<Doctor> getAllDoctors(){
@@ -55,23 +64,18 @@ public class ListDoctorsActivity extends AppCompatActivity {
             ListDoctors listDoctors = new ListDoctors(this, getFilterList(filter));
             ListView listView = (ListView) findViewById(R.id.listViewDoctors);
             listView.setAdapter(listDoctors);
-            listView.setOnClickListener(clickList());
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Doctor dr = (Doctor) parent.getItemAtPosition(position);
+                    Intent intent = new Intent(ListDoctorsActivity.this, DoctorDetails.class);
+                    intent.putExtra("Doctor", dr);
+                    startActivity(intent);
+                }
+            });
         }
     }
 
-
-    //TODO como fazer um item da lista ir para a sua activity
-    private View.OnClickListener clickList(){
-        return new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TextView nome=(TextView) v.findViewById(R.id.nameDoctorView);
-                Intent intent=new Intent(ListDoctorsActivity.this, DoctorDetails.class);
-                intent.putExtra("nomeDoctor", nome.getText());
-                startActivity(intent);
-            }
-        };
-    }
 
     public List<Doctor> getFilterList(CharSequence filter){
         List<Doctor> filterlist = new ArrayList<>();
