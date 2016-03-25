@@ -36,6 +36,7 @@ public class ListComents extends AppCompatActivity {
 
     public void callAddComment(View v){
         Intent intent = new Intent(ListComents.this, AddComment.class);
+        intent.putExtra("Doctor", doctor);
         startActivity(intent);
     }
 

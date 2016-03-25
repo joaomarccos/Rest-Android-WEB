@@ -9,4 +9,84 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.ifpb.pdm.servicosmedicos.AddComment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/container">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Fazer Comentário e Avaliação"
+                android:id="@+id/textView"
+                android:layout_gravity="center_horizontal" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/contentbody">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="UserName"
+                    android:id="@+id/UserNameView"
+                    android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ratingContent">
+
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/avaliacao"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5"
+                        android:isIndicator="false"
+                        android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/commentContent">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:inputType="textMultiLine"
+                            android:ems="10"
+                            android:id="@+id/editTextComment" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fazer Comentário"
+                            android:layout_margin="@dimen/activity_horizontal_margin"
+                            android:layout_gravity="center_horizontal"
+                            android:onClick="add"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
 </RelativeLayout>

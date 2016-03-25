@@ -16,7 +16,8 @@ public class UserPreferences {
         editor = settings.edit();
     }
 
-    public void saveUserName(String name){
+
+    public  void saveUserName(String name){
         editor.putString("UserName", name);
         editor.commit();
     }
